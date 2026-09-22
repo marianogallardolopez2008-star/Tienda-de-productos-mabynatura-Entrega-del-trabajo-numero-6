@@ -1,0 +1,251 @@
+/* reset de css*/
+/* fixed,STICKY */
+ *{
+    margin:0 ; /*hacia fuera de la caja*/
+    padding :0; /*hacia dentro de la caja*/
+    box-sizing: border-box;
+ }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+header{
+    padding: 0;
+}
+body{
+    background-color:#A893B4;
+  font-family:"Oswald",sans-serif;
+}
+
+h1{ 
+   font-size: 3.5rem;
+   font-weight: 700;
+    color:#741A31;
+}
+p{
+    color: #FAFAFF;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+h2{
+    color: #47315E;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header nav ul li {  
+    list-style: none;
+}
+.nav-decoracion {
+    text-decoration: none;
+    color: #0C080A;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 2px solid #0C080A;
+    border-radius: 20px;
+}
+.parrafodetitulo-diferenciado{
+    font-size: 2rem;
+    font-weight: 450;
+}
+.nav-decoracion2 {
+    text-decoration: none;
+    color: #0C080A;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.copi-decoracion{
+    color: #741A31;
+    font-size:  1.5rem;;
+    font-weight: 400
+}
+
+.parrafo-diferenciado{
+    color: #FAFAFF;
+    font-size:  1.5rem;;
+    font-weight: 400; 
+}
+
+.img-home{
+    height: 90px;
+    width: auto;
+}
+footer{
+    padding: 0 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 600;    
+    font-size: 1rem;
+}
+.titulo-diferente{
+    font-size: 1.8rem;
+   font-weight: 700;
+    color:#FAFAFF;
+}
+footer nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.presentacion-index {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+.servicios-index {
+    display: grid;
+    grid-template-areas:
+    "contenido"
+    "imagen";
+    gap: 2rem;
+    padding: 40px;
+} 
+
+.servicios-contenido {
+grid-area: contenido;
+}
+.servicios-index figure{
+    grid-area: imagen;
+}
+@media (min-width: 1024px) {
+    .servicios-index {
+        grid-template-areas:
+            "contenido imagen";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================
+   BOOTSTRAP - NAVBAR PERSONALIZADA
+========================== */
+.navbar-custom {
+    background-color: #47315E;
+    padding: 15px 50px;
+}
+.navbar-custom .navbar-brand {
+    color: #FAFAFF;
+}
+.navbar-toggler {
+    border-color: #FAFAFF;
+}
+.navbar-toggler-icon {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+.navbar-nav {
+    gap: 10px;
+}
+.navbar-nav .nav-link.nav-decoracion {
+    color: #FAFAFF;
+}
+
+/* ==========================
+   BOOTSTRAP - CAROUSEL PERSONALIZADO
+========================== */
+.galeria-index,
+.galeria-contacto {
+    padding: 40px;
+}
+.card-galeria {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(12, 8, 10, 0.35);
+}
+.carousel-item img {
+    max-height: 480px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.carousel-item:hover img {
+    transform: scale(1.03);
+}
+.carousel-caption {
+    background-color: rgba(12, 8, 10, 0.55);
+    border-radius: 10px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #741A31;
+    border-radius: 50%;
+    padding: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: #A893B4;
+    transform: scale(1.1);
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #741A31;
+}
+
+/* ==========================
+   BOTÓN PROPIO
+========================== */
+.btn-custom {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #741A31;
+    color: #FAFAFF;
+    border: 2px solid #741A31;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    background-color: #A893B4;
+    border-color: #A893B4;
+    color: #0C080A;
+    transform: translateY(-3px);
+}
+.btn-custom:active {
+    background-color: #0C080A;
+    border-color: #0C080A;
+    color: #FAFAFF;
+    transform: translateY(0);
+}
+
+/* ==========================
+   ESTADOS INTERACTIVOS (hover / focus / active)
+========================== */
+.nav-decoracion,
+.nav-decoracion2 {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-decoracion:hover,
+.nav-decoracion:focus {
+    background-color: #A893B4;
+    color: #0C080A;
+    border-color: #A893B4;
+    transform: translateY(-2px);
+}
+.nav-decoracion:active,
+.nav-decoracion.active {
+    background-color: #741A31;
+    color: #FAFAFF;
+    border-color: #741A31;
+    transform: translateY(0);
+}
+
+.nav-decoracion2:hover,
+.nav-decoracion2:focus {
+    color: #741A31;
+    transform: translateY(-2px);
+}
+.nav-decoracion2:active {
+    color: #0C080A;
+    transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #A893B4;
+    outline-offset: 2px;
+}
