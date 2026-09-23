@@ -1,0 +1,78 @@
+
+@use "utilities/variables";
+@use "utilities/mixins";
+
+@use "base/base";
+@use "base/tipografia";
+
+@use "layout/header";
+@use "layout/footer";
+@use "layout/nav";
+
+@use "components/buttons";
+@use "components/cards";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.presentacion-index {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+.servicios-index {
+    display: grid;
+    grid-template-areas:
+        "contenido"
+        "imagen";
+    gap: 2rem;
+    padding: 40px;
+
+    .servicios-contenido {
+        grid-area: contenido;
+    }
+
+    figure {
+        grid-area: imagen;
+    }
+}
+
+@media (min-width: 1024px) {
+    .servicios-index {
+        grid-template-areas:
+            "contenido imagen";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .parrafodetitulo-diferenciado {
+        font-size: 1.2rem;
+    }
+
+    p,
+    .parrafo-diferenciado {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .presentacion-index,
+    .galeria-index,
+    .galeria-contacto {
+        padding: 20px;
+    }
+
+    figure {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

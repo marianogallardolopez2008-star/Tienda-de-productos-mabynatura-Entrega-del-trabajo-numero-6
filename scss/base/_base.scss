@@ -1,0 +1,18 @@
+
+
+@use "../utilities/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0;
+}
+
+body {
+    background-color: $color-fondo;
+    font-family: "Oswald", sans-serif;
+}

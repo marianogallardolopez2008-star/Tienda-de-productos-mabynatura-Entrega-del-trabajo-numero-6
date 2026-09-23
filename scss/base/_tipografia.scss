@@ -1,0 +1,42 @@
+@use "../utilities/variables" as *;
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $color-principal;
+}
+
+h2 {
+    color: $color-secundario;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+p {
+    color: $color-texto-claro;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.parrafodetitulo-diferenciado {
+    font-size: 2rem;
+    font-weight: 450;
+}
+
+.parrafo-diferenciado {
+    color: $color-texto-claro;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.titulo-diferente {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-texto-claro;
+}
+
+.copi-decoracion {
+    color: $color-principal;
+    font-size: 1.5rem;
+    font-weight: 400;
+}

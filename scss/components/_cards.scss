@@ -1,0 +1,57 @@
+@use "../utilities/variables" as *;
+
+.galeria-index,
+.galeria-contacto {
+    padding: 40px;
+}
+
+.card-galeria {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba($color-texto-oscuro, 0.35);
+}
+
+.carousel-item {
+    img {
+        max-height: 480px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.03);
+        }
+    }
+}
+
+.carousel-caption {
+    background-color: rgba($color-texto-oscuro, 0.55);
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: $color-principal;
+    border-radius: 50%;
+    padding: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: $color-fondo;
+    transform: scale(1.1);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: $color-principal;
+}
+
+@media (max-width: 767.98px) {
+    .carousel-item {
+        img {
+            max-height: 260px;
+        }
+    }
+}

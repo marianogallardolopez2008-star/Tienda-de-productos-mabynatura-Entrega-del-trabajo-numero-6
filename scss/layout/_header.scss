@@ -1,0 +1,14 @@
+.img-home {
+    height: 90px;
+    width: auto;
+}
+
+@media (max-width: 767.98px) {
+    .img-home {
+        height: 60px;
+    }
+
+    .titulo-diferente {
+        font-size: 1.3rem;
+    }
+}

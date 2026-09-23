@@ -1,0 +1,26 @@
+footer {
+    padding: 0 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+
+    nav {
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}

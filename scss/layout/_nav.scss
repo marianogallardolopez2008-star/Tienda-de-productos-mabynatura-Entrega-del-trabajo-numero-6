@@ -1,0 +1,78 @@
+@use "../utilities/variables" as *;
+
+.navbar-custom {
+    background-color: $color-secundario;
+    padding: 15px 50px;
+
+    .navbar-brand {
+        color: $color-texto-claro;
+    }
+}
+
+.navbar-toggler {
+    border-color: $color-texto-claro;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.navbar-nav .nav-link.nav-decoracion {
+    color: $color-texto-claro;
+}
+
+.nav-decoracion {
+    text-decoration: none;
+    color: $color-texto-oscuro;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 2px solid $color-texto-oscuro;
+    border-radius: 20px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $color-fondo;
+        color: $color-texto-oscuro;
+    }
+
+    &:focus {
+        background-color: $color-fondo;
+        color: $color-texto-oscuro;
+    }
+
+    &:active {
+        background-color: $color-principal;
+        color: $color-texto-claro;
+    }
+}
+
+.nav-decoracion2 {
+    text-decoration: none;
+    color: $color-texto-oscuro;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+        color: $color-principal;
+    }
+
+    &:focus {
+        color: $color-principal;
+    }
+
+    &:active {
+        color: $color-texto-oscuro;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-custom {
+        padding: 10px 20px;
+    }
+}
